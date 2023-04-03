@@ -1,5 +1,6 @@
 package com.example.fastcampusprojectboard.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Disabled("Spring Data REST 통합테스트는 불필요하므로 제외시킴")
 //@WebMvcTest //slice test라서 controller 외의 bean들을 로드하지 않음(data rest의 autoconfiguration을 따로 넣지 않음 -> test를 인테그레이션으로 작성하는 것으로 변경
 @DisplayName("Data Rest -API Test")
 @Transactional  //로그를 확인하려면 application파일에서 "org.springframework.transaction.interceptor: TRACE" 추가하기

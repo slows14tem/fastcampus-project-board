@@ -37,7 +37,6 @@ class ArticleControllerTest {
                 .andExpect(model().attributeExists("articles"));    //컨트롤러에서 저장한 모델의 정보를 검증
     }
 
-    @Disabled("구현중")
     @DisplayName("[view][GET] 게시글 상세 페이지 - 정상호출")
     @Test
     public void givenNothing_whenRequestingArticleView_thenReturnsArticleView() throws Exception {
@@ -48,8 +47,8 @@ class ArticleControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/detail"))
-                .andExpect(model().attributeExists("articles"))
-                .andExpect(model().attributeExists("articlesComments"));
+                .andExpect(model().attributeExists("article"))
+                .andExpect(model().attributeExists("articleComments"));
     }
 
     @Disabled("구현중")
